@@ -2,6 +2,53 @@
    TRADO - Authentication Pages Styles
    ======================================== */
 
+/* Mobile Header for Auth Pages */
+.auth-mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: var(--white);
+    padding: 0 16px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-mobile-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.auth-mobile-header .logo-text {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.auth-mobile-header .logo-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+.auth-mobile-header .lang-switcher {
+    position: static;
+    box-shadow: none;
+    background: var(--gray-100);
+}
+
+/* Desktop only lang-switcher */
+.lang-switcher.desktop-only {
+    display: flex;
+}
+
 .auth-container {
     min-height: 100vh;
     display: grid;
@@ -433,17 +480,69 @@
     }
     
     .auth-left {
-        display: none;
+        display: none !important;
     }
     
     .auth-right {
         padding: 40px 24px;
     }
     
-    .lang-switcher {
+    .lang-switcher.desktop-only {
+        display: flex;
         position: fixed;
         top: 20px;
         right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Show mobile header */
+    .auth-mobile-header {
+        display: flex;
+    }
+    
+    /* Hide desktop lang-switcher */
+    .lang-switcher.desktop-only {
+        display: none !important;
+    }
+    
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .auth-left {
+        display: none !important;
+        width: 0 !important;
+        visibility: hidden !important;
+    }
+    
+    .auth-right {
+        padding: 80px 20px 40px;
+        width: 100%;
+    }
+    
+    .auth-mobile-header .lang-switcher {
+        display: flex !important;
+        flex-direction: row !important;
+        width: auto !important;
+        height: auto !important;
+        padding: 4px;
+        gap: 4px;
+    }
+    
+    .auth-mobile-header .lang-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    .auth-form-header h2 {
+        font-size: 26px;
+    }
+    
+    .auth-form-header p {
+        font-size: 14px;
     }
 }
 

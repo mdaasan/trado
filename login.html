@@ -6,13 +6,25 @@
     <title>Login - Trado</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="auth.css">
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="lang-switcher">
+    <!-- Mobile Header (shows only on mobile) -->
+    <header class="auth-mobile-header">
+        <a href="index.html" class="logo">
+            <span class="logo-text">TRADO</span>
+            <span class="logo-dot"></span>
+        </a>
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ar">عربي</button>
+        </div>
+    </header>
+
+    <!-- Language Switcher (shows only on desktop) -->
+    <div class="lang-switcher desktop-only">
         <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn" data-lang="ar">عربي</button>
     </div>
