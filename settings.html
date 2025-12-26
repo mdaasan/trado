@@ -292,13 +292,13 @@
                 </div>
                 
                 <div class="broker-actions">
-                    <button class="btn-secondary">
+                    <button class="btn-secondary" onclick="showAPIModal()">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
                         </svg>
                         <span data-en="Update API Keys" data-ar="تحديث مفاتيح API">Update API Keys</span>
                     </button>
-                    <button class="btn-outline-danger">
+                    <button class="btn-outline-danger" onclick="showDisconnectModal()">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18.36 6.64a9 9 0 1 1-12.73 0"/>
                             <line x1="12" y1="2" x2="12" y2="12"/>
@@ -523,7 +523,167 @@
         </div>
     </main>
 
+    <!-- Update API Keys Modal -->
+    <div class="modal-overlay" id="apiModal">
+        <div class="modal-content api-modal">
+            <div class="modal-header">
+                <h3 data-en="Update API Keys" data-ar="تحديث مفاتيح API">Update API Keys</h3>
+                <button class="modal-close" onclick="closeModal('apiModal')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            <form id="apiForm" class="api-form">
+                <div class="form-group">
+                    <label for="apiKey" data-en="API Key" data-ar="مفتاح API">API Key</label>
+                    <input type="text" id="apiKey" placeholder="Enter your API key" required>
+                </div>
+                <div class="form-group">
+                    <label for="apiSecret" data-en="API Secret" data-ar="السر">API Secret</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="apiSecret" placeholder="Enter your API secret" required>
+                        <button type="button" class="toggle-visibility" onclick="toggleSecretVisibility()">
+                            <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+                                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                                <line x1="1" y1="1" x2="23" y2="23"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="api-note">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="16" x2="12" y2="12"/>
+                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                    </svg>
+                    <span data-en="You can find your API keys in your broker's settings page" data-ar="يمكنك العثور على مفاتيح API في صفحة إعدادات الوسيط">You can find your API keys in your broker's settings page</span>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" onclick="closeModal('apiModal')" data-en="Cancel" data-ar="إلغاء">Cancel</button>
+                    <button type="submit" class="btn-primary" data-en="Update Keys" data-ar="تحديث المفاتيح">Update Keys</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Disconnect Broker Modal -->
+    <div class="modal-overlay" id="disconnectModal">
+        <div class="modal-content">
+            <div class="modal-icon danger">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18.36 6.64a9 9 0 1 1-12.73 0"/>
+                    <line x1="12" y1="2" x2="12" y2="12"/>
+                </svg>
+            </div>
+            <h3 data-en="Disconnect Broker?" data-ar="قطع اتصال الوسيط؟">Disconnect Broker?</h3>
+            <p data-en="This will stop all trading activities. You can reconnect anytime from the onboarding page." data-ar="سيؤدي هذا إلى إيقاف جميع أنشطة التداول. يمكنك إعادة الاتصال في أي وقت من صفحة الإعداد.">This will stop all trading activities. You can reconnect anytime from the onboarding page.</p>
+            <div class="modal-actions">
+                <button class="btn-secondary" onclick="closeModal('disconnectModal')" data-en="Cancel" data-ar="إلغاء">Cancel</button>
+                <button class="btn-danger" onclick="confirmDisconnect()" data-en="Disconnect" data-ar="قطع الاتصال">Disconnect</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+            </div>
+            <h3 id="successTitle">Success!</h3>
+            <p id="successMessage">Your changes have been saved.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" onclick="closeModal('successModal')" data-en="Got it" data-ar="حسناً">Got it</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     <script src="dashboard.js"></script>
+    <script>
+        // Modal Functions
+        function showAPIModal() {
+            document.getElementById('apiModal').classList.add('active');
+        }
+        
+        function showDisconnectModal() {
+            document.getElementById('disconnectModal').classList.add('active');
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+        
+        // Toggle API Secret Visibility
+        function toggleSecretVisibility() {
+            const input = document.getElementById('apiSecret');
+            const eyeOpen = document.querySelector('.toggle-visibility .eye-open');
+            const eyeClosed = document.querySelector('.toggle-visibility .eye-closed');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                eyeOpen.style.display = 'none';
+                eyeClosed.style.display = 'block';
+            } else {
+                input.type = 'password';
+                eyeOpen.style.display = 'block';
+                eyeClosed.style.display = 'none';
+            }
+        }
+        
+        // API Form Submit
+        document.getElementById('apiForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const isArabic = document.documentElement.lang === 'ar';
+            
+            closeModal('apiModal');
+            document.getElementById('successTitle').textContent = isArabic ? 'تم التحديث!' : 'Updated!';
+            document.getElementById('successMessage').textContent = isArabic 
+                ? 'تم تحديث مفاتيح API بنجاح.'
+                : 'Your API keys have been updated successfully.';
+            document.getElementById('successModal').classList.add('active');
+            
+            this.reset();
+        });
+        
+        // Confirm Disconnect
+        function confirmDisconnect() {
+            const isArabic = document.documentElement.lang === 'ar';
+            
+            // Update broker status to disconnected
+            const statusBadge = document.querySelector('.broker-status-badge');
+            if (statusBadge) {
+                statusBadge.classList.remove('connected');
+                statusBadge.classList.add('disconnected');
+                statusBadge.querySelector('span').textContent = isArabic ? 'غير متصل' : 'Disconnected';
+            }
+            
+            closeModal('disconnectModal');
+            document.getElementById('successTitle').textContent = isArabic ? 'تم قطع الاتصال' : 'Disconnected';
+            document.getElementById('successMessage').textContent = isArabic 
+                ? 'تم قطع اتصال الوسيط. يمكنك إعادة الاتصال في أي وقت.'
+                : 'Your broker has been disconnected. You can reconnect anytime.';
+            document.getElementById('successModal').classList.add('active');
+        }
+        
+        // Close modal when clicking outside
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -2211,6 +2211,139 @@ body[dir="rtl"] .detail-row {
     background: #b91c1c;
 }
 
+/* Payment Modal */
+.payment-modal {
+    max-width: 480px;
+    text-align: left;
+}
+
+.payment-modal .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.payment-modal .modal-header h3 {
+    margin-bottom: 0;
+}
+
+.modal-close {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--gray-100);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-close svg {
+    width: 20px;
+    height: 20px;
+    color: var(--gray-500);
+}
+
+.modal-close:hover {
+    background: var(--gray-200);
+}
+
+.modal-close:hover svg {
+    color: var(--gray-700);
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.payment-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.payment-form label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-700);
+}
+
+.payment-form input {
+    padding: 14px 16px;
+    border: 2px solid var(--gray-200);
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: var(--font-body);
+    transition: all 0.2s ease;
+}
+
+.payment-form input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(36, 54, 191, 0.1);
+}
+
+.payment-form input::placeholder {
+    color: var(--gray-400);
+}
+
+.payment-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.card-input-wrapper {
+    position: relative;
+}
+
+.card-input-wrapper input {
+    width: 100%;
+    padding-right: 80px;
+}
+
+.card-icons {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 4px;
+    opacity: 0.5;
+}
+
+.payment-modal .modal-actions {
+    margin-top: 8px;
+    justify-content: flex-end;
+}
+
+.payment-modal .modal-actions button {
+    flex: none;
+    padding: 12px 24px;
+}
+
+/* RTL Support for Payment Modal */
+body[dir="rtl"] .payment-modal {
+    text-align: right;
+}
+
+body[dir="rtl"] .card-input-wrapper input {
+    padding-right: 16px;
+    padding-left: 80px;
+}
+
+body[dir="rtl"] .card-icons {
+    right: auto;
+    left: 12px;
+}
+
 /* ========================================
    SVG Size Fixes - Mobile Safe
    ======================================== */
