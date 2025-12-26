@@ -1,0 +1,819 @@
+/* ========================================
+   TRADO - Settings Page Professional Styles
+   ======================================== */
+
+/* Settings Card */
+.settings-card {
+    background: var(--white);
+    border-radius: 24px;
+    border: 1px solid var(--gray-100);
+    margin-bottom: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.settings-card.danger {
+    border-color: #fecaca;
+    background: linear-gradient(180deg, #fff 0%, #fef2f2 100%);
+}
+
+.settings-card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 28px 32px;
+    border-bottom: 1px solid var(--gray-100);
+    background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
+}
+
+.settings-card.danger .settings-card-header {
+    background: linear-gradient(180deg, #fef2f2 0%, #fff 100%);
+    border-bottom-color: #fecaca;
+}
+
+.settings-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.settings-card-icon.profile {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    box-shadow: 0 8px 20px rgba(36, 54, 191, 0.3);
+}
+
+.settings-card-icon.broker {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+.settings-card-icon.notifications {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+}
+
+.settings-card-icon.security {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.settings-card-icon.danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+}
+
+.settings-card-icon svg {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+.settings-card-title {
+    flex: 1;
+}
+
+.settings-card-title h3 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.settings-card.danger .settings-card-title h3 {
+    color: #991b1b;
+}
+
+.settings-card-title p {
+    font-size: 14px;
+    color: var(--gray-500);
+    margin: 0;
+}
+
+.settings-card.danger .settings-card-title p {
+    color: #b91c1c;
+}
+
+.settings-card-body {
+    padding: 32px;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.profile-avatar-large {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 12px 32px rgba(36, 54, 191, 0.3);
+}
+
+.profile-avatar-large span {
+    font-family: var(--font-display);
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+}
+
+.avatar-edit-btn {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    width: 36px;
+    height: 36px;
+    background: white;
+    border: 2px solid var(--gray-200);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-edit-btn:hover {
+    border-color: var(--primary);
+    transform: scale(1.1);
+}
+
+.avatar-edit-btn svg {
+    width: 18px;
+    height: 18px;
+    color: var(--gray-600);
+}
+
+.profile-header-info h4 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.profile-header-info p {
+    font-size: 15px;
+    color: var(--gray-500);
+    margin-bottom: 8px;
+}
+
+.member-since {
+    display: inline-flex;
+    padding: 6px 14px;
+    background: var(--gray-100);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--gray-500);
+}
+
+/* Profile Form */
+.profile-form {
+    max-width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-field label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-700);
+}
+
+.form-field label svg {
+    width: 20px;
+    height: 20px;
+    color: var(--primary);
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 16px;
+    border: 2px solid var(--gray-200);
+    border-radius: 14px;
+    background: var(--gray-50);
+    transition: all 0.3s ease;
+    color: var(--gray-800);
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(36, 54, 191, 0.1);
+}
+
+.form-actions {
+    padding-top: 24px;
+    border-top: 1px solid var(--gray-100);
+    margin-top: 8px;
+}
+
+.form-actions .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+}
+
+.form-actions .btn-primary svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Connection Badge */
+.connection-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.connection-badge.connected {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.pulse-dot {
+    width: 10px;
+    height: 10px;
+    background: #16a34a;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(22, 163, 74, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+
+/* Broker Info Card */
+.broker-info-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px;
+    border: 1px solid var(--gray-200);
+    margin-bottom: 24px;
+}
+
+.broker-logo {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+}
+
+.broker-logo span {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+}
+
+.broker-details {
+    flex: 1;
+}
+
+.broker-details h4 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.broker-details p {
+    font-size: 14px;
+    color: var(--gray-500);
+    margin: 0;
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-pill.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-pill svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Broker Stats Grid */
+.broker-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.broker-stat-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.broker-stat-box:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 16px rgba(36, 54, 191, 0.1);
+}
+
+.stat-box-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-box-icon.blue {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+}
+
+.stat-box-icon.blue svg {
+    color: #2563eb;
+}
+
+.stat-box-icon.purple {
+    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+}
+
+.stat-box-icon.purple svg {
+    color: #7c3aed;
+}
+
+.stat-box-icon.green {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.stat-box-icon.green svg {
+    color: #16a34a;
+}
+
+.stat-box-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.stat-box-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-box-label {
+    font-size: 12px;
+    color: var(--gray-500);
+}
+
+.stat-box-value {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.stat-box-value.green {
+    color: #16a34a;
+}
+
+/* Broker Actions */
+.broker-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.broker-actions .btn-secondary,
+.broker-actions .btn-outline-danger {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+}
+
+.broker-actions svg {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-outline-danger {
+    background: transparent;
+    border: 2px solid #dc2626;
+    color: #dc2626;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+    background: #dc2626;
+    color: white;
+}
+
+/* Toggle List */
+.toggle-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.toggle-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.toggle-item:first-child {
+    padding-top: 0;
+}
+
+.toggle-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.toggle-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-100);
+}
+
+.toggle-icon svg {
+    width: 22px;
+    height: 22px;
+    color: var(--gray-500);
+}
+
+.toggle-icon.blue {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+}
+
+.toggle-icon.blue svg {
+    color: #2563eb;
+}
+
+.toggle-icon.green {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.toggle-icon.green svg {
+    color: #16a34a;
+}
+
+.toggle-icon.red {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+}
+
+.toggle-icon.red svg {
+    color: #dc2626;
+}
+
+.toggle-icon.purple {
+    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+}
+
+.toggle-icon.purple svg {
+    color: #7c3aed;
+}
+
+.toggle-text h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.toggle-text p {
+    font-size: 14px;
+    color: var(--gray-500);
+    margin: 0;
+}
+
+/* Toggle Switch - Enhanced */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 32px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--gray-300);
+    transition: 0.4s;
+    border-radius: 32px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* Security Options */
+.security-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.security-option {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: var(--gray-50);
+    border-radius: 16px;
+    margin-bottom: 16px;
+    border: 1px solid var(--gray-100);
+    transition: all 0.3s ease;
+}
+
+.security-option:last-child {
+    margin-bottom: 0;
+}
+
+.security-option:hover {
+    border-color: var(--primary);
+    background: var(--white);
+}
+
+.security-option-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray-200);
+}
+
+.security-option-icon svg {
+    width: 22px;
+    height: 22px;
+    color: var(--primary);
+}
+
+.security-option-content {
+    flex: 1;
+}
+
+.security-option-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.security-option-content p {
+    font-size: 14px;
+    color: var(--gray-500);
+    margin: 0;
+}
+
+.security-status {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.security-status.not-enabled {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.security-count {
+    padding: 8px 16px;
+    background: var(--gray-100);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-700);
+}
+
+/* Danger Options */
+.danger-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.danger-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid #fecaca;
+    border-radius: 16px;
+}
+
+.danger-option-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #991b1b;
+    margin-bottom: 4px;
+}
+
+.danger-option-content p {
+    font-size: 14px;
+    color: #b91c1c;
+    margin: 0;
+}
+
+.btn-danger {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
+
+.btn-danger svg,
+.btn-outline-danger svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .settings-card-header {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    
+    .settings-card-body {
+        padding: 20px;
+    }
+    
+    .connection-badge {
+        width: 100%;
+        justify-content: center;
+        margin-top: 12px;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .broker-info-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .broker-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .broker-actions {
+        flex-direction: column;
+    }
+    
+    .broker-actions button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .security-option {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .danger-option {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .danger-option button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* RTL Support */
+body[dir="rtl"] .avatar-edit-btn {
+    right: auto;
+    left: -8px;
+}
+
+body[dir="rtl"] .toggle-slider:before {
+    left: auto;
+    right: 3px;
+}
+
+body[dir="rtl"] .toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(-24px);
+}

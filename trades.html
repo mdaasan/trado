@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trades - Trado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="trades.css">
+</head>
+<body class="dashboard-body">
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <span class="logo-text">TRADO</span>
+                <span class="logo-dot"></span>
+            </a>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"/>
+                            <rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/>
+                            <rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                        <span data-en="Dashboard" data-ar="لوحة التحكم">Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="trades.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        <span data-en="Trades" data-ar="الصفقات">Trades</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="analytics.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12a9 9 0 1 1-9-9"/>
+                            <path d="M21 3v9h-9"/>
+                        </svg>
+                        <span data-en="Analytics" data-ar="التحليلات">Analytics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="subscription.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M7 15h0M2 9h20"/>
+                        </svg>
+                        <span data-en="Subscription" data-ar="الاشتراك">Subscription</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                        <span data-en="Settings" data-ar="الإعدادات">Settings</span>
+                    </a>
+                </li>
+                <li class="nav-divider"></li>
+                <li class="lang-nav-item">
+                    <div class="sidebar-lang-switcher">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ar">عربي</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="login.html" class="logout-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                    <polyline points="16 17 21 12 16 7"/>
+                    <line x1="21" y1="12" x2="9" y2="12"/>
+                </svg>
+                <span data-en="Logout" data-ar="تسجيل الخروج">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="mobile-menu-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+                <div class="greeting">
+                    <h1 data-en="Trades" data-ar="الصفقات">Trades</h1>
+                    <p data-en="Monitor your trading activity" data-ar="راقب نشاط تداولك">Monitor your trading activity</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-profile">
+                    <div class="user-avatar">JD</div>
+                    <div class="user-info">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-plan" data-en="Pro Plan" data-ar="الخطة الاحترافية">Pro Plan</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-row-4">
+            <div class="mini-stat-card green">
+                <div class="mini-stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                    </svg>
+                </div>
+                <div class="mini-stat-info">
+                    <span class="mini-stat-value">122</span>
+                    <span class="mini-stat-label" data-en="Winning" data-ar="رابحة">Winning</span>
+                </div>
+                <span class="mini-stat-badge green">78.4%</span>
+            </div>
+            <div class="mini-stat-card red">
+                <div class="mini-stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/>
+                    </svg>
+                </div>
+                <div class="mini-stat-info">
+                    <span class="mini-stat-value">34</span>
+                    <span class="mini-stat-label" data-en="Losing" data-ar="خاسرة">Losing</span>
+                </div>
+                <span class="mini-stat-badge red">21.6%</span>
+            </div>
+            <div class="mini-stat-card blue">
+                <div class="mini-stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                </div>
+                <div class="mini-stat-info">
+                    <span class="mini-stat-value">3</span>
+                    <span class="mini-stat-label" data-en="Active" data-ar="نشطة">Active</span>
+                </div>
+            </div>
+            <div class="mini-stat-card gold">
+                <div class="mini-stat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                </div>
+                <div class="mini-stat-info">
+                    <span class="mini-stat-value">$18.25</span>
+                    <span class="mini-stat-label" data-en="Avg Profit" data-ar="متوسط الربح">Avg Profit</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-bar">
+            <select class="filter-select">
+                <option data-en="All Trades" data-ar="كل الصفقات">All Trades</option>
+                <option data-en="Active" data-ar="نشطة">Active</option>
+                <option data-en="Closed" data-ar="مغلقة">Closed</option>
+            </select>
+            <select class="filter-select">
+                <option data-en="All Results" data-ar="كل النتائج">All Results</option>
+                <option data-en="Profit" data-ar="ربح">Profit</option>
+                <option data-en="Loss" data-ar="خسارة">Loss</option>
+            </select>
+            <select class="filter-select">
+                <option data-en="Last 7 Days" data-ar="آخر 7 أيام">Last 7 Days</option>
+                <option data-en="Last 30 Days" data-ar="آخر 30 يوم">Last 30 Days</option>
+                <option data-en="All Time" data-ar="كل الوقت">All Time</option>
+            </select>
+        </div>
+
+        <!-- Active Trades Section -->
+        <div class="section-header">
+            <h2 data-en="Active Trades" data-ar="الصفقات النشطة">Active Trades</h2>
+            <span class="section-badge blue">3 <span data-en="open" data-ar="مفتوحة">open</span></span>
+        </div>
+
+        <div class="trades-list">
+            <div class="trade-card active">
+                <div class="trade-card-header">
+                    <div class="trade-asset">
+                        <span class="asset-icon-sm">Au</span>
+                        <span class="asset-name">XAU/USD</span>
+                    </div>
+                    <span class="trade-type-badge buy">BUY</span>
+                </div>
+                <div class="trade-card-body">
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Entry" data-ar="الدخول">Entry</span>
+                        <span class="trade-value">$2,045.30</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Current" data-ar="الحالي">Current</span>
+                        <span class="trade-value">$2,052.15</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Lot Size" data-ar="الحجم">Lot Size</span>
+                        <span class="trade-value">0.05</span>
+                    </div>
+                </div>
+                <div class="trade-card-footer">
+                    <div class="trade-pnl profit">
+                        <span class="pnl-label" data-en="P/L" data-ar="الربح">P/L</span>
+                        <span class="pnl-value">+$34.25</span>
+                    </div>
+                    <div class="trade-duration">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>2h 15m</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trade-card active">
+                <div class="trade-card-header">
+                    <div class="trade-asset">
+                        <span class="asset-icon-sm">Au</span>
+                        <span class="asset-name">XAU/USD</span>
+                    </div>
+                    <span class="trade-type-badge buy">BUY</span>
+                </div>
+                <div class="trade-card-body">
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Entry" data-ar="الدخول">Entry</span>
+                        <span class="trade-value">$2,048.50</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Current" data-ar="الحالي">Current</span>
+                        <span class="trade-value">$2,052.15</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Lot Size" data-ar="الحجم">Lot Size</span>
+                        <span class="trade-value">0.03</span>
+                    </div>
+                </div>
+                <div class="trade-card-footer">
+                    <div class="trade-pnl profit">
+                        <span class="pnl-label" data-en="P/L" data-ar="الربح">P/L</span>
+                        <span class="pnl-value">+$10.95</span>
+                    </div>
+                    <div class="trade-duration">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>45m</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trade-card active">
+                <div class="trade-card-header">
+                    <div class="trade-asset">
+                        <span class="asset-icon-sm">Au</span>
+                        <span class="asset-name">XAU/USD</span>
+                    </div>
+                    <span class="trade-type-badge sell">SELL</span>
+                </div>
+                <div class="trade-card-body">
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Entry" data-ar="الدخول">Entry</span>
+                        <span class="trade-value">$2,055.00</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Current" data-ar="الحالي">Current</span>
+                        <span class="trade-value">$2,052.15</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Lot Size" data-ar="الحجم">Lot Size</span>
+                        <span class="trade-value">0.02</span>
+                    </div>
+                </div>
+                <div class="trade-card-footer">
+                    <div class="trade-pnl profit">
+                        <span class="pnl-label" data-en="P/L" data-ar="الربح">P/L</span>
+                        <span class="pnl-value">+$5.70</span>
+                    </div>
+                    <div class="trade-duration">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        <span>20m</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trade History Section -->
+        <div class="section-header">
+            <h2 data-en="Trade History" data-ar="سجل الصفقات">Trade History</h2>
+            <span class="section-badge gray">156 <span data-en="total" data-ar="إجمالي">total</span></span>
+        </div>
+
+        <div class="trades-list">
+            <div class="trade-card closed">
+                <div class="trade-card-header">
+                    <div class="trade-asset">
+                        <span class="asset-icon-sm">Au</span>
+                        <span class="asset-name">XAU/USD</span>
+                    </div>
+                    <span class="trade-type-badge buy">BUY</span>
+                </div>
+                <div class="trade-card-body">
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Entry" data-ar="الدخول">Entry</span>
+                        <span class="trade-value">$2,042.00</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Exit" data-ar="الخروج">Exit</span>
+                        <span class="trade-value">$2,048.50</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Lot Size" data-ar="الحجم">Lot Size</span>
+                        <span class="trade-value">0.05</span>
+                    </div>
+                </div>
+                <div class="trade-card-footer">
+                    <div class="trade-pnl profit">
+                        <span class="pnl-label" data-en="P/L" data-ar="الربح">P/L</span>
+                        <span class="pnl-value">+$32.50</span>
+                    </div>
+                    <div class="trade-date">
+                        <span>Dec 25, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trade-card closed">
+                <div class="trade-card-header">
+                    <div class="trade-asset">
+                        <span class="asset-icon-sm">Au</span>
+                        <span class="asset-name">XAU/USD</span>
+                    </div>
+                    <span class="trade-type-badge sell">SELL</span>
+                </div>
+                <div class="trade-card-body">
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Entry" data-ar="الدخول">Entry</span>
+                        <span class="trade-value">$2,050.00</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Exit" data-ar="الخروج">Exit</span>
+                        <span class="trade-value">$2,045.20</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Lot Size" data-ar="الحجم">Lot Size</span>
+                        <span class="trade-value">0.03</span>
+                    </div>
+                </div>
+                <div class="trade-card-footer">
+                    <div class="trade-pnl profit">
+                        <span class="pnl-label" data-en="P/L" data-ar="الربح">P/L</span>
+                        <span class="pnl-value">+$14.40</span>
+                    </div>
+                    <div class="trade-date">
+                        <span>Dec 25, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trade-card closed">
+                <div class="trade-card-header">
+                    <div class="trade-asset">
+                        <span class="asset-icon-sm">Au</span>
+                        <span class="asset-name">XAU/USD</span>
+                    </div>
+                    <span class="trade-type-badge buy">BUY</span>
+                </div>
+                <div class="trade-card-body">
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Entry" data-ar="الدخول">Entry</span>
+                        <span class="trade-value">$2,038.50</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Exit" data-ar="الخروج">Exit</span>
+                        <span class="trade-value">$2,035.00</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Lot Size" data-ar="الحجم">Lot Size</span>
+                        <span class="trade-value">0.02</span>
+                    </div>
+                </div>
+                <div class="trade-card-footer">
+                    <div class="trade-pnl loss">
+                        <span class="pnl-label" data-en="P/L" data-ar="الخسارة">P/L</span>
+                        <span class="pnl-value">-$7.00</span>
+                    </div>
+                    <div class="trade-date">
+                        <span>Dec 24, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trade-card closed">
+                <div class="trade-card-header">
+                    <div class="trade-asset">
+                        <span class="asset-icon-sm">Au</span>
+                        <span class="asset-name">XAU/USD</span>
+                    </div>
+                    <span class="trade-type-badge buy">BUY</span>
+                </div>
+                <div class="trade-card-body">
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Entry" data-ar="الدخول">Entry</span>
+                        <span class="trade-value">$2,030.00</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Exit" data-ar="الخروج">Exit</span>
+                        <span class="trade-value">$2,042.80</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Lot Size" data-ar="الحجم">Lot Size</span>
+                        <span class="trade-value">0.04</span>
+                    </div>
+                </div>
+                <div class="trade-card-footer">
+                    <div class="trade-pnl profit">
+                        <span class="pnl-label" data-en="P/L" data-ar="الربح">P/L</span>
+                        <span class="pnl-value">+$51.20</span>
+                    </div>
+                    <div class="trade-date">
+                        <span>Dec 24, 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trade-card closed">
+                <div class="trade-card-header">
+                    <div class="trade-asset">
+                        <span class="asset-icon-sm">Au</span>
+                        <span class="asset-name">XAU/USD</span>
+                    </div>
+                    <span class="trade-type-badge sell">SELL</span>
+                </div>
+                <div class="trade-card-body">
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Entry" data-ar="الدخول">Entry</span>
+                        <span class="trade-value">$2,055.00</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Exit" data-ar="الخروج">Exit</span>
+                        <span class="trade-value">$2,048.00</span>
+                    </div>
+                    <div class="trade-row">
+                        <span class="trade-label" data-en="Lot Size" data-ar="الحجم">Lot Size</span>
+                        <span class="trade-value">0.05</span>
+                    </div>
+                </div>
+                <div class="trade-card-footer">
+                    <div class="trade-pnl profit">
+                        <span class="pnl-label" data-en="P/L" data-ar="الربح">P/L</span>
+                        <span class="pnl-value">+$35.00</span>
+                    </div>
+                    <div class="trade-date">
+                        <span>Dec 23, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More -->
+        <button class="btn-secondary btn-block load-more" data-en="Load More Trades" data-ar="تحميل المزيد">Load More Trades</button>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

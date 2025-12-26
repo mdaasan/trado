@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Trado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <span class="logo-text">TRADO</span>
+                <span class="logo-dot"></span>
+            </a>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"/>
+                            <rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/>
+                            <rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                        <span data-en="Dashboard" data-ar="لوحة التحكم">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="trades.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        <span data-en="Trades" data-ar="الصفقات">Trades</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="analytics.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12a9 9 0 1 1-9-9"/>
+                            <path d="M21 3v9h-9"/>
+                        </svg>
+                        <span data-en="Analytics" data-ar="التحليلات">Analytics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="subscription.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M7 15h0M2 9h20"/>
+                        </svg>
+                        <span data-en="Subscription" data-ar="الاشتراك">Subscription</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                        <span data-en="Settings" data-ar="الإعدادات">Settings</span>
+                    </a>
+                </li>
+                <li class="nav-divider"></li>
+                <li class="lang-nav-item">
+                    <div class="sidebar-lang-switcher">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="ar">عربي</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="login.html" class="logout-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                    <polyline points="16 17 21 12 16 7"/>
+                    <line x1="21" y1="12" x2="9" y2="12"/>
+                </svg>
+                <span data-en="Logout" data-ar="تسجيل الخروج">Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="mobile-menu-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+                <div class="greeting">
+                    <h1 data-en="Analytics" data-ar="التحليلات">Analytics</h1>
+                    <p data-en="Detailed insights into your trading performance" data-ar="رؤى تفصيلية لأداء تداولك">Detailed insights into your trading performance</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="date-range-selector">
+                    <select class="filter-select">
+                        <option value="7d" data-en="Last 7 Days" data-ar="آخر 7 أيام">Last 7 Days</option>
+                        <option value="30d" selected data-en="Last 30 Days" data-ar="آخر 30 يوم">Last 30 Days</option>
+                        <option value="90d" data-en="Last 90 Days" data-ar="آخر 90 يوم">Last 90 Days</option>
+                        <option value="all" data-en="All Time" data-ar="كل الوقت">All Time</option>
+                    </select>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">JD</div>
+                    <div class="user-info">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-plan" data-en="Pro Plan" data-ar="الخطة الاحترافية">Pro Plan</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Performance Overview -->
+        <div class="stats-row">
+            <div class="stat-card-dash">
+                <div class="stat-icon green">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-label" data-en="Total Profit" data-ar="إجمالي الربح">Total Profit</span>
+                    <span class="stat-value-dash">$2,847.00</span>
+                    <span class="stat-change positive">+12.5% <span data-en="vs last month" data-ar="مقارنة بالشهر الماضي">vs last month</span></span>
+                </div>
+            </div>
+            <div class="stat-card-dash">
+                <div class="stat-icon blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-label" data-en="Avg. Trade Duration" data-ar="متوسط مدة الصفقة">Avg. Trade Duration</span>
+                    <span class="stat-value-dash">1h 24m</span>
+                    <span class="stat-change" data-en="Per trade" data-ar="لكل صفقة">Per trade</span>
+                </div>
+            </div>
+            <div class="stat-card-dash">
+                <div class="stat-icon purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-label" data-en="Best Trade" data-ar="أفضل صفقة">Best Trade</span>
+                    <span class="stat-value-dash">+$127.50</span>
+                    <span class="stat-change" data-en="Dec 18, 2024" data-ar="18 ديسمبر 2024">Dec 18, 2024</span>
+                </div>
+            </div>
+            <div class="stat-card-dash">
+                <div class="stat-icon gold">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 20V10"/>
+                        <path d="M18 20V4"/>
+                        <path d="M6 20v-4"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-label" data-en="Profit Factor" data-ar="معامل الربح">Profit Factor</span>
+                    <span class="stat-value-dash">2.34</span>
+                    <span class="stat-change positive" data-en="Excellent" data-ar="ممتاز">Excellent</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="analytics-grid">
+            <!-- Profit Chart -->
+            <div class="card chart-card-large">
+                <div class="card-header">
+                    <h3 data-en="Profit Over Time" data-ar="الربح عبر الوقت">Profit Over Time</h3>
+                    <div class="chart-legend">
+                        <span class="legend-item"><span class="legend-dot green"></span> <span data-en="Profit" data-ar="ربح">Profit</span></span>
+                        <span class="legend-item"><span class="legend-dot red"></span> <span data-en="Loss" data-ar="خسارة">Loss</span></span>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-placeholder">
+                        <svg viewBox="0 0 400 200">
+                            <defs>
+                                <linearGradient id="profitGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.3"/>
+                                    <stop offset="100%" style="stop-color:#10b981;stop-opacity:0"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M0,150 Q50,120 100,130 T200,100 T300,80 T400,60" fill="none" stroke="#10b981" stroke-width="3"/>
+                            <path d="M0,150 Q50,120 100,130 T200,100 T300,80 T400,60 L400,200 L0,200 Z" fill="url(#profitGradient)"/>
+                            <!-- Grid lines -->
+                            <line x1="0" y1="50" x2="400" y2="50" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="5,5"/>
+                            <line x1="0" y1="100" x2="400" y2="100" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="5,5"/>
+                            <line x1="0" y1="150" x2="400" y2="150" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="5,5"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Win Rate Donut -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 data-en="Win Rate" data-ar="نسبة الفوز">Win Rate</h3>
+                </div>
+                <div class="donut-chart-container">
+                    <div class="donut-chart">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" fill="none" stroke="#fee2e2" stroke-width="12"/>
+                            <circle cx="50" cy="50" r="40" fill="none" stroke="#10b981" stroke-width="12" 
+                                    stroke-dasharray="197 251" stroke-dashoffset="63" transform="rotate(-90 50 50)"/>
+                        </svg>
+                        <div class="donut-center">
+                            <span class="donut-value">78.4%</span>
+                            <span class="donut-label" data-en="Win Rate" data-ar="نسبة الفوز">Win Rate</span>
+                        </div>
+                    </div>
+                    <div class="donut-stats">
+                        <div class="donut-stat">
+                            <span class="dot green"></span>
+                            <span data-en="Winning" data-ar="رابحة">Winning</span>
+                            <strong>122</strong>
+                        </div>
+                        <div class="donut-stat">
+                            <span class="dot red"></span>
+                            <span data-en="Losing" data-ar="خاسرة">Losing</span>
+                            <strong>34</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Stats -->
+        <div class="stats-grid-3">
+            <div class="card stat-detail-card">
+                <div class="stat-detail-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                    </svg>
+                    <span data-en="Trading Stats" data-ar="إحصائيات التداول">Trading Stats</span>
+                </div>
+                <div class="stat-detail-list">
+                    <div class="stat-detail-item">
+                        <span data-en="Total Trades" data-ar="إجمالي الصفقات">Total Trades</span>
+                        <strong>156</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Avg. Profit/Trade" data-ar="متوسط الربح/صفقة">Avg. Profit/Trade</span>
+                        <strong class="green">$18.25</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Avg. Loss/Trade" data-ar="متوسط الخسارة/صفقة">Avg. Loss/Trade</span>
+                        <strong class="red">-$7.80</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Largest Win" data-ar="أكبر ربح">Largest Win</span>
+                        <strong class="green">$127.50</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Largest Loss" data-ar="أكبر خسارة">Largest Loss</span>
+                        <strong class="red">-$32.00</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card stat-detail-card">
+                <div class="stat-detail-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span data-en="Time Analysis" data-ar="تحليل الوقت">Time Analysis</span>
+                </div>
+                <div class="stat-detail-list">
+                    <div class="stat-detail-item">
+                        <span data-en="Best Trading Day" data-ar="أفضل يوم تداول">Best Trading Day</span>
+                        <strong>Tuesday</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Best Trading Hour" data-ar="أفضل ساعة تداول">Best Trading Hour</span>
+                        <strong>10:00 - 11:00</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Avg. Trade Duration" data-ar="متوسط مدة الصفقة">Avg. Trade Duration</span>
+                        <strong>1h 24m</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Longest Win Streak" data-ar="أطول سلسلة فوز">Longest Win Streak</span>
+                        <strong class="green">12 trades</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Current Streak" data-ar="السلسلة الحالية">Current Streak</span>
+                        <strong class="green">+5 wins</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card stat-detail-card">
+                <div class="stat-detail-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span data-en="Risk Metrics" data-ar="مقاييس المخاطر">Risk Metrics</span>
+                </div>
+                <div class="stat-detail-list">
+                    <div class="stat-detail-item">
+                        <span data-en="Profit Factor" data-ar="معامل الربح">Profit Factor</span>
+                        <strong class="green">2.34</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Risk/Reward Ratio" data-ar="نسبة المخاطرة/العائد">Risk/Reward Ratio</span>
+                        <strong>1:2.3</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Max Drawdown" data-ar="أقصى تراجع">Max Drawdown</span>
+                        <strong class="red">-$156.00</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Recovery Factor" data-ar="معامل الاسترداد">Recovery Factor</span>
+                        <strong>18.26</strong>
+                    </div>
+                    <div class="stat-detail-item">
+                        <span data-en="Sharpe Ratio" data-ar="نسبة شارب">Sharpe Ratio</span>
+                        <strong class="green">1.85</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Monthly Performance -->
+        <div class="card">
+            <div class="card-header">
+                <h3 data-en="Monthly Performance" data-ar="الأداء الشهري">Monthly Performance</h3>
+            </div>
+            <div class="monthly-grid">
+                <div class="month-card positive">
+                    <span class="month-name">Dec</span>
+                    <span class="month-value">+$847</span>
+                    <span class="month-trades">32 trades</span>
+                </div>
+                <div class="month-card positive">
+                    <span class="month-name">Nov</span>
+                    <span class="month-value">+$623</span>
+                    <span class="month-trades">45 trades</span>
+                </div>
+                <div class="month-card positive">
+                    <span class="month-name">Oct</span>
+                    <span class="month-value">+$512</span>
+                    <span class="month-trades">38 trades</span>
+                </div>
+                <div class="month-card negative">
+                    <span class="month-name">Sep</span>
+                    <span class="month-value">-$89</span>
+                    <span class="month-trades">28 trades</span>
+                </div>
+                <div class="month-card positive">
+                    <span class="month-name">Aug</span>
+                    <span class="month-value">+$954</span>
+                    <span class="month-trades">41 trades</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

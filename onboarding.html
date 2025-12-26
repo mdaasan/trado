@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - Trado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="onboarding.css">
+</head>
+<body class="onboarding-body">
+    
+    <div class="onboarding-container">
+        <!-- Sidebar Progress -->
+        <aside class="onboarding-sidebar">
+            <a href="index.html" class="logo">
+                <span class="logo-text">TRADO</span>
+                <span class="logo-dot"></span>
+            </a>
+            
+            <div class="progress-steps">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-indicator">
+                        <span class="step-number">1</span>
+                        <svg class="step-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="step-info">
+                        <span class="step-title" data-en="Choose Plan" data-ar="اختر الخطة">Choose Plan</span>
+                        <span class="step-desc" data-en="Select your subscription" data-ar="اختر اشتراكك">Select your subscription</span>
+                    </div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-indicator">
+                        <span class="step-number">2</span>
+                        <svg class="step-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="step-info">
+                        <span class="step-title" data-en="Payment Method" data-ar="طريقة الدفع">Payment Method</span>
+                        <span class="step-desc" data-en="Add your card details" data-ar="أضف بيانات بطاقتك">Add your card details</span>
+                    </div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-indicator">
+                        <span class="step-number">3</span>
+                        <svg class="step-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="step-info">
+                        <span class="step-title" data-en="Connect Broker" data-ar="ربط الوسيط">Connect Broker</span>
+                        <span class="step-desc" data-en="Link your trading account" data-ar="اربط حساب التداول">Link your trading account</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="help-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                    </svg>
+                    <div>
+                        <span data-en="Need help?" data-ar="تحتاج مساعدة؟">Need help?</span>
+                        <a href="mailto:support@tradobot.com">support@tradobot.com</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="onboarding-main">
+            <!-- Step 1: Choose Plan -->
+            <section class="onboarding-step active" data-step="1">
+                <div class="step-header">
+                    <h1 data-en="Choose Your Plan" data-ar="اختر خطتك">Choose Your Plan</h1>
+                    <p data-en="Start with 14 days free. Cancel anytime before trial ends." data-ar="ابدأ بـ 14 يوم مجاناً. ألغِ في أي وقت قبل انتهاء التجربة.">Start with 14 days free. Cancel anytime before trial ends.</p>
+                </div>
+                
+                <div class="plans-container">
+                    <div class="plan-option" data-plan="basic">
+                        <div class="plan-header-ob">
+                            <h3 data-en="Basic" data-ar="الأساسية">Basic</h3>
+                            <div class="plan-price-ob">
+                                <span class="currency">$</span>
+                                <span class="amount">150</span>
+                                <span class="period" data-en="/month" data-ar="/شهرياً">/month</span>
+                            </div>
+                        </div>
+                        <div class="plan-details">
+                            <div class="plan-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-en="Account size: $500 - $2,500" data-ar="حجم الحساب: 500$ - 2,500$">Account size: $500 - $2,500</span>
+                            </div>
+                            <div class="plan-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-en="Standard trade frequency" data-ar="تردد صفقات عادي">Standard trade frequency</span>
+                            </div>
+                            <div class="plan-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-en="Smart market-hours trading" data-ar="تداول ذكي بساعات السوق">Smart market-hours trading</span>
+                            </div>
+                            <div class="plan-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-en="Real-time dashboard" data-ar="لوحة تحكم مباشرة">Real-time dashboard</span>
+                            </div>
+                            <div class="plan-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-en="Email support" data-ar="دعم بالبريد">Email support</span>
+                            </div>
+                        </div>
+                        <div class="plan-select">
+                            <div class="radio-circle"></div>
+                            <span data-en="Select Basic" data-ar="اختر الأساسية">Select Basic</span>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-option recommended" data-plan="pro">
+                        <div class="recommended-badge" data-en="Recommended" data-ar="موصى به">Recommended</div>
+                        <div class="plan-header-ob">
+                            <h3 data-en="Pro" data-ar="الاحترافية">Pro</h3>
+                            <div class="plan-price-ob">
+                                <span class="currency">$</span>
+                                <span class="amount">300</span>
+                                <span class="period" data-en="/month" data-ar="/شهرياً">/month</span>
+                            </div>
+                        </div>
+                        <div class="plan-details">
+                            <div class="plan-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-en="Account size: $3,000+" data-ar="حجم الحساب: 3,000$+">Account size: $3,000+</span>
+                            </div>
+                            <div class="plan-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-en="Higher trade frequency" data-ar="تردد صفقات أعلى">Higher trade frequency</span>
+                            </div>
+                            <div class="plan-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-en="Maximum profit potential" data-ar="أقصى إمكانية ربح">Maximum profit potential</span>
+                            </div>
+                            <div class="plan-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-en="Smart market-hours trading" data-ar="تداول ذكي بساعات السوق">Smart market-hours trading</span>
+                            </div>
+                            <div class="plan-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-en="Priority support" data-ar="دعم أولوية">Priority support</span>
+                            </div>
+                            <div class="plan-feature">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span data-en="Advanced analytics" data-ar="تحليلات متقدمة">Advanced analytics</span>
+                            </div>
+                        </div>
+                        <div class="plan-select">
+                            <div class="radio-circle"></div>
+                            <span data-en="Select Pro" data-ar="اختر الاحترافية">Select Pro</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-actions">
+                    <button class="btn-primary btn-large btn-next" disabled data-en="Continue to Payment" data-ar="المتابعة للدفع">Continue to Payment</button>
+                </div>
+                
+                <p class="step-note" data-en="You won't be charged until your 14-day trial ends" data-ar="لن يتم الخصم حتى انتهاء الـ 14 يوم التجريبية">You won't be charged until your 14-day trial ends</p>
+            </section>
+            
+            <!-- Step 2: Payment Method -->
+            <section class="onboarding-step" data-step="2">
+                <div class="step-header">
+                    <h1 data-en="Add Payment Method" data-ar="أضف طريقة الدفع">Add Payment Method</h1>
+                    <p data-en="Your card will be charged automatically after the 14-day free trial." data-ar="سيتم الخصم من بطاقتك تلقائياً بعد انتهاء الـ 14 يوم المجانية.">Your card will be charged automatically after the 14-day free trial.</p>
+                </div>
+                
+                <div class="selected-plan-summary">
+                    <div class="summary-label" data-en="Selected Plan" data-ar="الخطة المختارة">Selected Plan</div>
+                    <div class="summary-details">
+                        <span class="summary-plan">Pro</span>
+                        <span class="summary-price">$300<small data-en="/month" data-ar="/شهرياً">/month</small></span>
+                    </div>
+                    <button class="change-plan-btn" data-en="Change" data-ar="تغيير">Change</button>
+                </div>
+                
+                <div class="payment-methods">
+                    <div class="payment-method-tabs">
+                        <button class="payment-tab active" data-method="card">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                                <line x1="1" y1="10" x2="23" y2="10"/>
+                            </svg>
+                            <span data-en="Credit Card" data-ar="بطاقة ائتمان">Credit Card</span>
+                        </button>
+                        <button class="payment-tab" data-method="crypto">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.5 8h5l-1 8h-3l-1-8z"/>
+                                <path d="M12 6v2M12 16v2"/>
+                            </svg>
+                            <span data-en="Crypto" data-ar="عملات رقمية">Crypto</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Credit Card Form -->
+                    <div class="payment-form active" data-method="card">
+                        <div class="card-preview">
+                            <div class="card-preview-inner">
+                                <div class="card-top">
+                                    <div class="card-chip">
+                                        <div class="chip-line"></div>
+                                        <div class="chip-line"></div>
+                                        <div class="chip-line"></div>
+                                        <div class="chip-line"></div>
+                                    </div>
+                                    <div class="card-type">
+                                        <svg class="visa-logo" viewBox="0 0 750 471" fill="white">
+                                            <path d="M278.198 334.228l33.36-195.763h53.358l-33.384 195.763H278.198zm246.11-191.54c-10.569-3.966-27.135-8.222-47.822-8.222-52.725 0-89.863 26.551-90.18 64.604-.297 28.129 26.514 43.821 46.754 53.185 20.77 9.597 27.752 15.716 27.652 24.283-.133 13.123-16.586 19.116-31.924 19.116-21.355 0-32.701-2.967-50.225-10.274l-6.878-3.111-7.487 43.822c12.463 5.466 35.508 10.199 59.438 10.445 56.09 0 92.502-26.248 92.916-66.884.199-22.27-14.016-39.216-44.801-53.188-18.65-9.056-30.072-15.099-29.951-24.269 0-8.137 9.668-16.838 30.559-16.838 17.447-.271 30.088 3.534 39.936 7.5l4.781 2.259 7.232-42.428m137.308-4.223h-41.232c-12.773 0-22.332 3.486-27.94 16.234l-79.245 179.404h56.031s9.159-24.121 11.231-29.418c6.123 0 60.555.084 68.336.084 1.596 6.854 6.492 29.334 6.492 29.334h49.512l-43.185-195.638zm-65.417 126.408c4.414-11.279 21.26-54.724 21.26-54.724-.314.521 4.381-11.334 7.074-18.684l3.606 16.878s10.217 46.729 12.353 56.527h-44.293v.003zM209.298 142.465l-52.239 133.496-5.569-27.129c-9.726-31.274-40.025-65.157-73.898-82.12l47.767 171.204 56.455-.063 84.004-195.39-56.52.002"/>
+                                        </svg>
+                                        <svg class="mastercard-logo" viewBox="0 0 152 100" fill="white" style="display:none">
+                                            <circle cx="50" cy="50" r="45" fill="#EB001B"/>
+                                            <circle cx="102" cy="50" r="45" fill="#F79E1B"/>
+                                            <path d="M76 20.8c11.3 9.2 18.5 23.1 18.5 38.7s-7.2 29.5-18.5 38.7c-11.3-9.2-18.5-23.1-18.5-38.7s7.2-29.5 18.5-38.7z" fill="#FF5F00"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-number-preview">•••• •••• •••• ••••</div>
+                                <div class="card-bottom">
+                                    <div class="card-info">
+                                        <span class="card-label">Card Holder</span>
+                                        <span class="holder-name">YOUR NAME</span>
+                                    </div>
+                                    <div class="card-info">
+                                        <span class="card-label">Expires</span>
+                                        <span class="expiry-date">MM/YY</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-shine"></div>
+                        </div>
+                        
+                        <div class="card-form-container">
+                            <div class="form-section-title">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                                <span data-en="Secure Payment Details" data-ar="بيانات الدفع الآمنة">Secure Payment Details</span>
+                            </div>
+                            
+                            <form class="card-form" id="cardForm">
+                                <div class="form-group full-width">
+                                    <label for="cardName" data-en="Cardholder Name" data-ar="اسم حامل البطاقة">Cardholder Name</label>
+                                    <div class="input-wrapper">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                            <circle cx="12" cy="7" r="4"/>
+                                        </svg>
+                                        <input type="text" id="cardName" name="cardName" required placeholder="John Doe">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group full-width">
+                                    <label for="cardNumber" data-en="Card Number" data-ar="رقم البطاقة">Card Number</label>
+                                    <div class="input-wrapper card-number-input">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                                            <line x1="1" y1="10" x2="23" y2="10"/>
+                                        </svg>
+                                        <input type="text" id="cardNumber" name="cardNumber" required placeholder="1234 5678 9012 3456" maxlength="19">
+                                        <div class="card-brands">
+                                            <svg class="brand-visa" viewBox="0 0 750 471">
+                                                <rect width="750" height="471" fill="#1A1F71" rx="40"/>
+                                                <path fill="#fff" d="M278.198 334.228l33.36-195.763h53.358l-33.384 195.763H278.198zm246.11-191.54c-10.569-3.966-27.135-8.222-47.822-8.222-52.725 0-89.863 26.551-90.18 64.604-.297 28.129 26.514 43.821 46.754 53.185 20.77 9.597 27.752 15.716 27.652 24.283-.133 13.123-16.586 19.116-31.924 19.116-21.355 0-32.701-2.967-50.225-10.274l-6.878-3.111-7.487 43.822c12.463 5.466 35.508 10.199 59.438 10.445 56.09 0 92.502-26.248 92.916-66.884.199-22.27-14.016-39.216-44.801-53.188-18.65-9.056-30.072-15.099-29.951-24.269 0-8.137 9.668-16.838 30.559-16.838 17.447-.271 30.088 3.534 39.936 7.5l4.781 2.259 7.232-42.428m137.308-4.223h-41.232c-12.773 0-22.332 3.486-27.94 16.234l-79.245 179.404h56.031s9.159-24.121 11.231-29.418c6.123 0 60.555.084 68.336.084 1.596 6.854 6.492 29.334 6.492 29.334h49.512l-43.185-195.638zm-65.417 126.408c4.414-11.279 21.26-54.724 21.26-54.724-.314.521 4.381-11.334 7.074-18.684l3.606 16.878s10.217 46.729 12.353 56.527h-44.293v.003z"/>
+                                            </svg>
+                                            <svg class="brand-mastercard" viewBox="0 0 152 100">
+                                                <rect width="152" height="100" fill="#000" rx="8"/>
+                                                <circle cx="50" cy="50" r="30" fill="#EB001B"/>
+                                                <circle cx="102" cy="50" r="30" fill="#F79E1B"/>
+                                                <path d="M76 28c8 6.5 13 16.5 13 27s-5 20.5-13 27c-8-6.5-13-16.5-13-27s5-20.5 13-27z" fill="#FF5F00"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row two-cols">
+                                    <div class="form-group">
+                                        <label for="cardExpiry" data-en="Expiry Date" data-ar="تاريخ الانتهاء">Expiry Date</label>
+                                        <div class="input-wrapper">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                                <line x1="3" y1="10" x2="21" y2="10"/>
+                                            </svg>
+                                            <input type="text" id="cardExpiry" name="cardExpiry" required placeholder="MM/YY" maxlength="5">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cardCvc">
+                                            <span data-en="Security Code" data-ar="رمز الأمان">Security Code</span>
+                                            <span class="cvc-hint" title="3 digits on back of card">?</span>
+                                        </label>
+                                        <div class="input-wrapper">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                            </svg>
+                                            <input type="text" id="cardCvc" name="cardCvc" required placeholder="•••" maxlength="4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <div class="security-badges">
+                                <div class="security-badge">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        <path d="M9 12l2 2 4-4"/>
+                                    </svg>
+                                    <span data-en="SSL Secured" data-ar="مؤمن بـ SSL">SSL Secured</span>
+                                </div>
+                                <div class="security-badge">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    </svg>
+                                    <span data-en="256-bit Encryption" data-ar="تشفير 256-bit">256-bit Encryption</span>
+                                </div>
+                                <div class="security-badge">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                        <polyline points="22 4 12 14.01 9 11.01"/>
+                                    </svg>
+                                    <span data-en="PCI Compliant" data-ar="متوافق مع PCI">PCI Compliant</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-note">
+                            <div class="note-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 16v-4M12 8h.01"/>
+                                </svg>
+                            </div>
+                            <div class="note-content">
+                                <strong data-en="No charges today" data-ar="لن يتم الخصم اليوم">No charges today</strong>
+                                <p data-en="Your card will only be charged after your 14-day free trial ends. Cancel anytime before then." data-ar="سيتم الخصم من بطاقتك فقط بعد انتهاء الـ 14 يوم المجانية. يمكنك الإلغاء في أي وقت قبل ذلك.">Your card will only be charged after your 14-day free trial ends. Cancel anytime before then.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Crypto Form -->
+                    <div class="payment-form" data-method="crypto">
+                        <div class="crypto-container">
+                            <div class="crypto-header">
+                                <div class="crypto-logo">
+                                    <svg viewBox="0 0 64 64" fill="none">
+                                        <circle cx="32" cy="32" r="32" fill="#26A17B"/>
+                                        <path d="M36.8 30.4v-3.2h8v-4.8H19.2v4.8h8v3.2c-7.2.4-12.8 2-12.8 4s5.6 3.6 12.8 4v12.8h9.6V38.4c7.2-.4 12.8-2 12.8-4s-5.6-3.6-12.8-4zm0 6.4v-.8c6.4-.4 11.2-1.6 11.2-3.2 0-1.6-4.8-2.8-11.2-3.2v4.8c-.8 0-1.6.1-2.4.1V29.6c-6.4.4-11.2 1.6-11.2 3.2 0 1.6 4.8 2.8 11.2 3.2v.8c.8 0 1.6-.1 2.4-.1v4.8c.8 0 1.6-.1 2.4-.1v-4.8l-.4.1z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div class="crypto-info">
+                                    <h3>Tether <span class="network-badge">USDT</span></h3>
+                                    <p>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                        </svg>
+                                        <span data-en="BEP-20 (Binance Smart Chain)" data-ar="BEP-20 (شبكة Binance Smart Chain)">BEP-20 (Binance Smart Chain)</span>
+                                    </p>
+                                </div>
+                                <div class="binance-badge">
+                                    <span>BSC</span>
+                                </div>
+                            </div>
+                            
+                            <div class="crypto-amount-box">
+                                <div class="amount-row">
+                                    <div class="amount-label" data-en="Subscription Amount" data-ar="مبلغ الاشتراك">Subscription Amount</div>
+                                    <div class="amount-value">
+                                        <span class="usdt-amount">0.00</span>
+                                        <span class="usdt-symbol">USDT</span>
+                                    </div>
+                                </div>
+                                <div class="amount-divider"></div>
+                                <div class="amount-note">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 16v-4M12 8h.01"/>
+                                    </svg>
+                                    <span data-en="Will be charged after 14-day free trial ends" data-ar="سيتم الخصم بعد انتهاء الـ 14 يوم المجانية">Will be charged after 14-day free trial ends</span>
+                                </div>
+                            </div>
+                            
+                            <div class="wallet-address-section">
+                                <label data-en="Deposit Address (BEP-20 Only)" data-ar="عنوان الإيداع (BEP-20 فقط)">Deposit Address (BEP-20 Only)</label>
+                                <div class="wallet-address-box">
+                                    <div class="address-display">
+                                        <span class="wallet-address" id="walletAddress">0x742d35Cc6634C0532925a3b844Bc9e7595f12ABC</span>
+                                    </div>
+                                    <button class="copy-btn" type="button" id="copyAddressBtn">
+                                        <svg class="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                        </svg>
+                                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+                                            <polyline points="20 6 9 17 4 12"/>
+                                        </svg>
+                                        <span class="copy-text" data-en="Copy" data-ar="نسخ">Copy</span>
+                                    </button>
+                                </div>
+                                
+                                <div class="qr-section">
+                                    <div class="qr-code-box">
+                                        <div class="qr-placeholder">
+                                            <svg viewBox="0 0 100 100" fill="none">
+                                                <rect x="5" y="5" width="25" height="25" stroke="currentColor" stroke-width="2" fill="none"/>
+                                                <rect x="10" y="10" width="15" height="15" fill="currentColor"/>
+                                                <rect x="70" y="5" width="25" height="25" stroke="currentColor" stroke-width="2" fill="none"/>
+                                                <rect x="75" y="10" width="15" height="15" fill="currentColor"/>
+                                                <rect x="5" y="70" width="25" height="25" stroke="currentColor" stroke-width="2" fill="none"/>
+                                                <rect x="10" y="75" width="15" height="15" fill="currentColor"/>
+                                                <rect x="40" y="5" width="5" height="5" fill="currentColor"/>
+                                                <rect x="50" y="5" width="5" height="5" fill="currentColor"/>
+                                                <rect x="40" y="15" width="5" height="5" fill="currentColor"/>
+                                                <rect x="55" y="15" width="5" height="5" fill="currentColor"/>
+                                                <rect x="45" y="25" width="5" height="5" fill="currentColor"/>
+                                                <rect x="40" y="40" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"/>
+                                                <rect x="45" y="45" width="10" height="10" fill="currentColor"/>
+                                                <rect x="70" y="40" width="5" height="5" fill="currentColor"/>
+                                                <rect x="80" y="40" width="5" height="5" fill="currentColor"/>
+                                                <rect x="70" y="50" width="5" height="5" fill="currentColor"/>
+                                                <rect x="90" y="50" width="5" height="5" fill="currentColor"/>
+                                                <rect x="75" y="60" width="5" height="5" fill="currentColor"/>
+                                                <rect x="85" y="55" width="5" height="5" fill="currentColor"/>
+                                                <rect x="5" y="45" width="5" height="5" fill="currentColor"/>
+                                                <rect x="15" y="40" width="5" height="5" fill="currentColor"/>
+                                                <rect x="25" y="50" width="5" height="5" fill="currentColor"/>
+                                                <rect x="70" y="70" width="10" height="10" fill="currentColor"/>
+                                                <rect x="85" y="75" width="10" height="10" fill="currentColor"/>
+                                                <rect x="70" y="85" width="5" height="10" fill="currentColor"/>
+                                                <rect x="80" y="90" width="15" height="5" fill="currentColor"/>
+                                            </svg>
+                                        </div>
+                                        <span class="qr-label" data-en="Scan to pay" data-ar="امسح للدفع">Scan to pay</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="crypto-warning-box">
+                                <div class="warning-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                        <line x1="12" y1="9" x2="12" y2="13"/>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                    </svg>
+                                </div>
+                                <div class="warning-content">
+                                    <strong data-en="Important Notice" data-ar="ملاحظة مهمة">Important Notice</strong>
+                                    <p data-en="Send only USDT using BEP-20 network. Sending via other networks (ERC-20, TRC-20, etc.) will result in permanent loss of your funds." data-ar="أرسل USDT عبر شبكة BEP-20 فقط. الإرسال عبر شبكات أخرى (ERC-20, TRC-20, إلخ) سيؤدي لخسارة دائمة لأموالك.">Send only USDT using BEP-20 network. Sending via other networks (ERC-20, TRC-20, etc.) will result in permanent loss of your funds.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="crypto-info-box">
+                                <div class="info-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    <span data-en="Confirmation time: 5-15 minutes" data-ar="وقت التأكيد: 5-15 دقيقة">Confirmation time: 5-15 minutes</span>
+                                </div>
+                                <div class="info-item">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                    <span data-en="Minimum deposit: 10 USDT" data-ar="الحد الأدنى للإيداع: 10 USDT">Minimum deposit: 10 USDT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-actions">
+                    <button class="btn-secondary btn-back" data-en="Back" data-ar="رجوع">Back</button>
+                    <button class="btn-primary btn-large btn-next" data-en="Continue to Connect Broker" data-ar="المتابعة لربط الوسيط">Continue to Connect Broker</button>
+                </div>
+                
+                <p class="step-note" data-en="Your 14-day free trial starts when you activate the bot" data-ar="تبدأ الـ 14 يوم المجانية عند تفعيل البوت">Your 14-day free trial starts when you activate the bot</p>
+            </section>
+            
+            <!-- Step 3: Connect Broker -->
+            <section class="onboarding-step" data-step="3">
+                <div class="step-header">
+                    <h1 data-en="Connect Your Broker" data-ar="اربط الوسيط">Connect Your Broker</h1>
+                    <p data-en="Select your broker and enter your API credentials. Your funds stay in your account." data-ar="اختر وسيطك وأدخل بيانات API. أموالك تبقى في حسابك.">Select your broker and enter your API credentials. Your funds stay in your account.</p>
+                </div>
+                
+                <div class="broker-selection">
+                    <div class="broker-grid">
+                        <div class="broker-option" data-broker="capital">
+                            <div class="broker-logo-ob">Capital.com</div>
+                            <div class="broker-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="broker-option" data-broker="ig">
+                            <div class="broker-logo-ob">IG Markets</div>
+                            <div class="broker-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="broker-option" data-broker="fxcm">
+                            <div class="broker-logo-ob">FXCM</div>
+                            <div class="broker-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="broker-option" data-broker="oanda">
+                            <div class="broker-logo-ob">OANDA</div>
+                            <div class="broker-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="broker-option" data-broker="forex">
+                            <div class="broker-logo-ob">FOREX.com</div>
+                            <div class="broker-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="broker-option" data-broker="ctrader">
+                            <div class="broker-logo-ob">cTrader</div>
+                            <div class="broker-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="broker-option" data-broker="atfx">
+                            <div class="broker-logo-ob">ATFX</div>
+                            <div class="broker-check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="api-form-container" style="display: none;">
+                    <div class="api-form-card">
+                        <div class="api-form-header">
+                            <div class="api-header-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                            </div>
+                            <div class="api-header-text">
+                                <h3 data-en="Enter API Credentials" data-ar="أدخل بيانات API">Enter API Credentials</h3>
+                                <p data-en="Connect your broker account securely" data-ar="اربط حساب الوسيط بأمان">Connect your broker account securely</p>
+                            </div>
+                            <a href="#" class="api-help-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                </svg>
+                                <span data-en="How to get API keys?" data-ar="كيف أحصل على مفاتيح API؟">How to get API keys?</span>
+                            </a>
+                        </div>
+                        
+                        <form class="api-form" id="apiForm">
+                            <div class="api-input-group">
+                                <label for="apiKey">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+                                    </svg>
+                                    <span data-en="API Key" data-ar="مفتاح API">API Key</span>
+                                </label>
+                                <div class="api-input-wrapper">
+                                    <input type="text" id="apiKey" name="apiKey" required placeholder="e.g., pk_live_xxxxxxxxxxxxx">
+                                    <div class="input-status"></div>
+                                </div>
+                                <span class="input-hint" data-en="Found in your broker's API settings" data-ar="موجود في إعدادات API لدى الوسيط">Found in your broker's API settings</span>
+                            </div>
+                            
+                            <div class="api-input-group">
+                                <label for="apiSecret">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    </svg>
+                                    <span data-en="API Secret" data-ar="سر API">API Secret</span>
+                                </label>
+                                <div class="api-input-wrapper has-toggle">
+                                    <input type="password" id="apiSecret" name="apiSecret" required placeholder="••••••••••••••••••••">
+                                    <button type="button" class="toggle-password-btn">
+                                        <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                            <circle cx="12" cy="12" r="3"/>
+                                        </svg>
+                                        <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+                                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                                            <line x1="1" y1="1" x2="23" y2="23"/>
+                                        </svg>
+                                    </button>
+                                    <div class="input-status"></div>
+                                </div>
+                                <span class="input-hint" data-en="Keep this secret - never share with anyone" data-ar="حافظ على سريته - لا تشاركه مع أحد">Keep this secret - never share with anyone</span>
+                            </div>
+                        </form>
+                        
+                        <div class="api-permissions">
+                            <div class="permission-title" data-en="Required Permissions" data-ar="الصلاحيات المطلوبة">Required Permissions</div>
+                            <div class="permissions-grid">
+                                <div class="permission-item enabled">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                    <span data-en="Read Account Balance" data-ar="قراءة رصيد الحساب">Read Account Balance</span>
+                                </div>
+                                <div class="permission-item enabled">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                    <span data-en="Execute Trades" data-ar="تنفيذ الصفقات">Execute Trades</span>
+                                </div>
+                                <div class="permission-item disabled">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"/>
+                                        <line x1="6" y1="6" x2="18" y2="18"/>
+                                    </svg>
+                                    <span data-en="Withdraw Funds" data-ar="سحب الأموال">Withdraw Funds</span>
+                                    <span class="not-needed" data-en="(Not needed)" data-ar="(غير مطلوب)">(Not needed)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="api-security-box">
+                        <div class="security-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="security-content">
+                            <strong data-en="Bank-Level Security" data-ar="أمان بمستوى البنوك">Bank-Level Security</strong>
+                            <p data-en="Your API credentials are encrypted with AES-256 and stored securely. We can only read your balance and execute trades - withdrawals are impossible." data-ar="بيانات API الخاصة بك مشفرة بـ AES-256 ومخزنة بأمان. يمكننا فقط قراءة رصيدك وتنفيذ الصفقات - السحب مستحيل.">Your API credentials are encrypted with AES-256 and stored securely. We can only read your balance and execute trades - withdrawals are impossible.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-actions">
+                    <button class="btn-secondary btn-back" data-en="Back" data-ar="رجوع">Back</button>
+                    <button class="btn-primary btn-large btn-next" disabled data-en="Connect & Start Trading" data-ar="اربط وابدأ التداول">Connect & Start Trading</button>
+                </div>
+            </section>
+            
+            <!-- Success Screen -->
+            <section class="onboarding-step success-step" data-step="success">
+                <div class="success-content">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h1 data-en="You're All Set!" data-ar="أنت جاهز!">You're All Set!</h1>
+                    <p data-en="Your account is connected and the bot is ready. Your 14-day free trial starts now." data-ar="حسابك متصل والبوت جاهز. تبدأ الـ 14 يوم المجانية الآن.">Your account is connected and the bot is ready. Your 14-day free trial starts now.</p>
+                    
+                    <div class="success-summary">
+                        <div class="summary-item">
+                            <span class="summary-label" data-en="Plan" data-ar="الخطة">Plan</span>
+                            <span class="summary-value">Pro - $300/mo</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label" data-en="Broker" data-ar="الوسيط">Broker</span>
+                            <span class="summary-value">Capital.com</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label" data-en="Trial Ends" data-ar="تنتهي التجربة">Trial Ends</span>
+                            <span class="summary-value trial-date">Jan 15, 2025</span>
+                        </div>
+                    </div>
+                    
+                    <a href="dashboard.html" class="btn-primary btn-large" data-en="Go to Dashboard" data-ar="انتقل للوحة التحكم">Go to Dashboard</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="onboarding.js"></script>
+</body>
+</html>
