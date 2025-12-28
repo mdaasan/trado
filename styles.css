@@ -1359,7 +1359,8 @@ body[dir="rtl"] .ai-note {
 /* Responsive */
 @media (max-width: 1024px) {
     .nav-links,
-    .nav-right {
+    .nav-right,
+    .nav-buttons {
         display: none;
     }
     

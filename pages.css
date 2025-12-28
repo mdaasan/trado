@@ -359,6 +359,27 @@ body[dir="rtl"] .ai-logic-item:hover {
     text-decoration: underline;
 }
 
+/* Warning Box for Risk Disclosure */
+.legal-section.warning-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 2px solid #f59e0b;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.legal-section.warning-box h2 {
+    color: #92400e;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 12px;
+}
+
+.legal-section.warning-box p {
+    color: #78350f;
+    margin-bottom: 0;
+}
+
 /* Nav Active State */
 .nav-links a.active {
     color: var(--primary);
